@@ -115,12 +115,17 @@ this.DataContext = new UsersViewModel();
 
 ## Populate chart with data
 
-As we are going to visualize the comparison of heights in the data model, add ColumnSeries to SfChart3D.Series property, and then bind the Data property of the above ViewModel to the ColumnSeries.ItemsSource property as follows.
+As we are going to visualize the comparison of heights in the data model, add [`ColumnSeries3D`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ColumnSeries3D.html)  to [`SfChart3D.Series'](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.SfChart3D~Series.html) property, and then bind the Data property of the above ViewModel to the [`ColumnSeries.ItemsSource`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartSeriesBase~ItemsSource.html)  property as follows.
 
 Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartSeriesBase~XBindingPath.html) and [`YBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.XyDataSeries~YBindingPath.html) properties, so that [`SfChart`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.SfChart.html) would fetch values from the respective properties in the data model to plot the series.)
 
 ###### Xaml
 ```xaml
+
+    <Window.DataContext>
+        <local:UsersViewModel/>
+    </Window.DataContext>
+    
 
   <chart:SfChart3D x:Name="Chart3D" Width="500" Height="500">
             
@@ -128,6 +133,7 @@ Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncf
         <chart:SfChart3D.PrimaryAxis>
             <chart:DateTimeAxis3D/>
         </chart:SfChart3D.PrimaryAxis>
+        
         <!--SecondaryAxis-->
         <chart:SfChart3D.SecondaryAxis>
             <chart:NumericalAxis3D/>
@@ -141,12 +147,25 @@ Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncf
 ```
 ###### C#
 ```C#
+
+    this.DataContext = new UsersViewModel();
+ 
     SfChart3D chart3D = new SfChart3D();
 
-    chart3D.PrimaryAxis = new CategoryAxis3D();
+    //Initializing primary axis
 
-    chart3D.SecondaryAxis = new NumericalAxis3D();
+     CategoryAxis3D primaryAxis = new CategoryAxis3D();
+     primaryAxis.Header = "Time";
+     primaryAxis.FontSize = 14;
+     chart.PrimaryAxis = primaryAxis;
 
+     //Initializing secondary Axis
+     NumericalAxis3D secondaryAxis = new NumericalAxis3D();
+     secondaryAxis.Header = "Users";
+     secondaryAxis.FontSize = 14;
+     chart.SecondaryAxis = secondaryAxis;
+
+    //Initializing column series
     ColumnSeries3D series = new ColumnSeries3D()
         {
             ItemsSource = new UsersViewModel().UsersList,
@@ -155,6 +174,7 @@ Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncf
         };
 
     Chart3D.Series.Add(series);
+    this.Content = chart3D;
 
 ```
 
