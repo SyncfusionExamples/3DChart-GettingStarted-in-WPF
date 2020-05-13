@@ -180,6 +180,6 @@ Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncf
 
 ## <a name="output"></a>Output ##
 
-![WPF Chart3D Getting_Started Chart image](Chart_3D_GettingStarted.png)
+![WPF Chart3D Getting_Started Chart image](Chart_3D_GettingStarted.png.PNG)
 
 
