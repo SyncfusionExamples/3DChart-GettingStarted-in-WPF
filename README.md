@@ -2,6 +2,8 @@
 
 This is demo application of WPF SfChart3D control. The minimal set of required properties have been configured in this project to get started with SfChart3D in WPF.
 
+## <a name="description"></a>Description ##
+
 ## Initialize chart
 
 Import the SfChart namespace in your XAML page.
