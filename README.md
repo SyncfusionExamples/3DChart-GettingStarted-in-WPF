@@ -150,6 +150,6 @@ Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncf
 ```
 
 ## Output
+![Getting_Started](Chart-3D-GettingStarted.png)
 
-![](Chart-3D-GettingStarted.png)
 
