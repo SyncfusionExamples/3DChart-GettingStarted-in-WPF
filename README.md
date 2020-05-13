@@ -82,7 +82,7 @@ Next, create a view model class and initialize a list of `UserProfile` objects a
 
 Set the ViewModel instance as the DataContext of your window; this is done to bind properties of ViewModel.
 
-[] (Add namespace of `ViewModel` class to your XAML window if you prefer to set `DataContext` in XAML.)
+<!--Add namespace of `ViewModel` class to your XAML window if you prefer to set `DataContext` in XAML.-->
 
 ```xml
 <Window x:Class="GettingStarted_3DCharts.MainWindow"
@@ -153,5 +153,5 @@ As we are going to visualize the comparison of heights in the data model, add Co
 
 ## Output
 
-![Getting Started 3DChart](Chart-3D-GettingStarted.png)
+![](Chart-3D-GettingStarted.png)
 
