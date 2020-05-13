@@ -42,9 +42,6 @@ Then initialize an empty chart with two axes as shown below,
         };
 ```
 
-![Chart 3D support in WPF](3D-Charts_images/Chart-3D-GettingStarted_init.png)
-
-
 ## Initialize view model
 
 Since, the above step will produce only an empty column 3D chart, plotting data must be added to the chart. This step illustrates how to create a sample data source. The data source must implement the IEnumerable interface.
@@ -85,7 +82,7 @@ Next, create a view model class and initialize a list of `UserProfile` objects a
 
 Set the ViewModel instance as the DataContext of your window; this is done to bind properties of ViewModel.
 
-N> Add namespace of `ViewModel` class to your XAML window if you prefer to set `DataContext` in XAML.
+[] (Add namespace of `ViewModel` class to your XAML window if you prefer to set `DataContext` in XAML.)
 
 ```xml
 <Window x:Class="GettingStarted_3DCharts.MainWindow"
@@ -114,7 +111,7 @@ this.DataContext = new UsersViewModel();
 
 As we are going to visualize the comparison of heights in the data model, add ColumnSeries to SfChart3D.Series property, and then bind the Data property of the above ViewModel to the ColumnSeries.ItemsSource property as follows.
 
-N> You need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartSeriesBase~XBindingPath.html) and [`YBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.XyDataSeries~YBindingPath.html) properties, so that [`SfChart`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.SfChart.html) would fetch values from the respective properties in the data model to plot the series.
+[] (You need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartSeriesBase~XBindingPath.html) and [`YBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.XyDataSeries~YBindingPath.html) properties, so that [`SfChart`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.SfChart.html) would fetch values from the respective properties in the data model to plot the series.)
 
 ```xml
 
@@ -156,4 +153,5 @@ N> You need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wp
 
 ## Output
 
+![Getting Started 3DChart](Chart-3D-GettingStarted.png)
 
