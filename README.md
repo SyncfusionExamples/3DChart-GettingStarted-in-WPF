@@ -6,17 +6,19 @@ This is demo application of WPF SfChart3D control. The minimal set of required p
 
 Import the SfChart namespace in your XAML page.
 
-```xml
+###### Xaml
+```xaml
  xmlns:chart="clr-namespace:Syncfusion.UI.Xaml.Charts;assembly=Syncfusion.SfChart.WPF"
 ```
-
+###### C#
 ```c#
 using Syncfusion.UI.Xaml.Charts;
 ```
 
 Then initialize an empty chart with two axes as shown below,
 
-```xml
+###### Xaml
+```xaml
     <chart:SfChart3D >
             
         <!--PrimaryAxis-->
@@ -32,6 +34,7 @@ Then initialize an empty chart with two axes as shown below,
 
 ```
 
+###### C#
 ```C#
 
      SfChart3D Chart3D = new SfChart3D()
@@ -46,6 +49,7 @@ Then initialize an empty chart with two axes as shown below,
 
 Since, the above step will produce only an empty column 3D chart, plotting data must be added to the chart. This step illustrates how to create a sample data source. The data source must implement the IEnumerable interface.
 
+###### C#
 ```C#
     public class UserProfile
     {
@@ -57,6 +61,7 @@ Since, the above step will produce only an empty column 3D chart, plotting data 
 
 Next, create a view model class and initialize a list of `UserProfile` objects as follows.
 
+###### C#
 ```C#
 
     public class UsersViewModel
@@ -82,7 +87,8 @@ Next, create a view model class and initialize a list of `UserProfile` objects a
 
 Set the ViewModel instance as the DataContext of your window; this is done to bind properties of ViewModel. Include namespace of `ViewModel` class to your XAML window if you prefer to set `DataContext` in XAML.
 
-```xml
+###### Xaml
+```xaml
 <Window x:Class="GettingStarted_3DCharts.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -100,7 +106,7 @@ Set the ViewModel instance as the DataContext of your window; this is done to bi
 </Window>
 
 ```
-
+###### C#
 ```C#
 this.DataContext = new UsersViewModel();
 ```
@@ -111,7 +117,8 @@ As we are going to visualize the comparison of heights in the data model, add Co
 
 Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartSeriesBase~XBindingPath.html) and [`YBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.XyDataSeries~YBindingPath.html) properties, so that [`SfChart`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.SfChart.html) would fetch values from the respective properties in the data model to plot the series.)
 
-```xml
+###### Xaml
+```xaml
 
   <chart:SfChart3D x:Name="Chart3D" Width="500" Height="500">
             
@@ -130,7 +137,7 @@ Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncf
     </chart:SfChart3D>
 
 ```
-
+###### C#
 ```C#
     SfChart3D chart3D = new SfChart3D();
 
@@ -149,7 +156,8 @@ Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncf
 
 ```
 
-## Output
-![Getting_Started](Chart-3D-GettingStarted.png)
+## <a name="output"></a>Output ##
+
+![WPF Chart3D Getting_Started Chart image](Chart-3D-GettingStarted.png)
 
 
