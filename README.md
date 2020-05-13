@@ -17,7 +17,7 @@ Import the SfChart namespace in your XAML page.
 using Syncfusion.UI.Xaml.Charts;
 ```
 
-Then initialize an empty chart with two axes as shown below,
+Then initialize an empty chart with PrimaryAxis and SecondaryAxis as shown below,
 
 ###### Xaml
 ```xaml
