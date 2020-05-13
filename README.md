@@ -80,9 +80,7 @@ Next, create a view model class and initialize a list of `UserProfile` objects a
 
 ```
 
-Set the ViewModel instance as the DataContext of your window; this is done to bind properties of ViewModel.
-
-<!--Add namespace of `ViewModel` class to your XAML window if you prefer to set `DataContext` in XAML.-->
+Set the ViewModel instance as the DataContext of your window; this is done to bind properties of ViewModel. Include namespace of `ViewModel` class to your XAML window if you prefer to set `DataContext` in XAML.
 
 ```xml
 <Window x:Class="GettingStarted_3DCharts.MainWindow"
@@ -111,7 +109,7 @@ this.DataContext = new UsersViewModel();
 
 As we are going to visualize the comparison of heights in the data model, add ColumnSeries to SfChart3D.Series property, and then bind the Data property of the above ViewModel to the ColumnSeries.ItemsSource property as follows.
 
-[] (You need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartSeriesBase~XBindingPath.html) and [`YBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.XyDataSeries~YBindingPath.html) properties, so that [`SfChart`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.SfChart.html) would fetch values from the respective properties in the data model to plot the series.)
+Need to set [`XBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.ChartSeriesBase~XBindingPath.html) and [`YBindingPath`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.XyDataSeries~YBindingPath.html) properties, so that [`SfChart`](https://help.syncfusion.com/cr/cref_files/wpf/Syncfusion.SfChart.WPF~Syncfusion.UI.Xaml.Charts.SfChart.html) would fetch values from the respective properties in the data model to plot the series.)
 
 ```xml
 
