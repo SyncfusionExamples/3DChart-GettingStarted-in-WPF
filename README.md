@@ -1,8 +1,6 @@
-# GettingStarted for WPF 3DChart
+# Getting Started with WPF 3D Chart (SfChart3D)
 
-This is demo application of WPF SfChart3D control. The minimal set of required properties have been configured in this project to get started with SfChart3D in WPF.
-
-## <a name="description"></a>Description ##
+This is demo application of [WPF SfChart3D](https://help.syncfusion.com/wpf/sfchart3d/gettingstarted) control. The minimal set of required properties have been configured in this project to get started with SfChart3D in WPF.
 
 ## Initialize chart
 
